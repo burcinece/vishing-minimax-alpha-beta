@@ -1,0 +1,18 @@
+kategori,senaryo_veya_eylem,duzeltilmis_dogru_deger,ham_hatali_deger,fark,aciklama
+heuristik_karsilastirma,A1 Aciliyet vurgusu,-11.0,-11.0,0.0,disclosed_info degismedigi icin fark yok
+heuristik_karsilastirma,A2 Otorite iddiasi,-9.0,-9.0,0.0,disclosed_info degismedigi icin fark yok
+heuristik_karsilastirma,A3 Guven kazanma,2.0,2.0,0.0,disclosed_info degismedigi icin fark yok
+heuristik_karsilastirma,A4 Korku olusturma,-18.0,-18.0,0.0,disclosed_info degismedigi icin fark yok
+heuristik_karsilastirma,A5 Odul/avantaj vaadi,-5.0,-5.0,0.0,disclosed_info degismedigi icin fark yok
+heuristik_karsilastirma,A6 Kimlik bilgisi isteme,-49.0,-29.0,20.0,BUG1 - hatali heuristik riski 20 puan dusuk gosteriyor
+heuristik_karsilastirma,A7 Finansal islem yonlendirmesi,-56.0,-36.0,20.0,BUG1 - hatali heuristik riski 20 puan dusuk gosteriyor
+heuristik_karsilastirma,A8 Teknik destek bahanesi,-11.5,-11.5,0.0,disclosed_info degismedigi icin fark yok
+bug2_d5_esik_hatasi,A6->D1->A7->D5 senaryosu,90,-30,120,BUG2 - ham kod D5 icin risk_score'u indirim sonrasi kontrol ediyor; T4 yerine T5 donuyor
+bug3_trust_clamp,3x A3 sonrasi trust_level,100,110,-10,BUG3 - ham kodda trust_level 100 sinirini asiyor
+bug3_trust_clamp,4x A7 sonrasi trust_level,0,-10,10,BUG3 - ham kodda trust_level 0 alt sinirinin altina iniyor
+dugum_sayisi,Minimax (derinlik=6),5734,5734,0,iki kod da ayni sayida dugum ziyaret ediyor
+dugum_sayisi,Alpha-Beta (derinlik=6),1330,1330,0,iki kod da ayni sayida dugum ziyaret ediyor
+dugum_sayisi,Budama orani (%),76.81,76.81,0,alpha-beta minimaxe gore dugumlerin buyuk kismini buduyor
+somuru_senaryosu,A6 sonrasi heuristik degeri,-49.0,-29.0,20.0,duzeltilmis kod esigi (-45) hemen asiyor hatali kod asamiyor
+somuru_senaryosu,A6 sonrasi secilen eylem,D3,D1,-,duzeltilmis kod ilk turda dogrulama istiyor hatali kod izlemeye devam ediyor
+somuru_senaryosu,A7 sonrasi heuristik degeri (hatali kolda),-,-70.0,-,hatali kod ancak ikinci firsatta esigi asip D3 secebiliyor
